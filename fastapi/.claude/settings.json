@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/sai/.claude/**)"
+    ],
+    "additionalDirectories": [
+      "/home/sai/.claude/projects/-home-sai-Documents-Coding-ClaudePractice-ClaudeSkillFastAPI"
+    ]
+  }
+}

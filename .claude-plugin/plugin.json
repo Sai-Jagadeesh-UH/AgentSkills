@@ -1,0 +1,18 @@
+[
+  {
+    "name": "fastapi-skill",
+    "description": "Expert FastAPI REST API development, testing, deployment, and optimization skill. Use when building APIs with FastAPI, designing Pydantic models, implementing JWT/OAuth2 auth, deploying to Docker/Azure Functions/Container Apps, or optimizing async Python API performance.",
+    "author": {
+      "name": "sai",
+      "email": ""
+    }
+  },
+  {
+    "name": "nicegui-ui",
+    "description": "Python UI development skill using the NiceGUI framework. Provides components, layouts, async patterns, data binding, auth, integrations, and testing guidance for building NiceGUI apps.",
+    "author": {
+      "name": "sai",
+      "email": ""
+    }
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "/home/sai/Documents/Coding/ClaudePractice/ClaudeSkillGit/fastapi/.git"
+    ],
+    "allow": [
+      "Bash(git -C /home/sai/Documents/Coding/ClaudePractice/ClaudeSkillGit status --short)"
+    ]
+  }
+}

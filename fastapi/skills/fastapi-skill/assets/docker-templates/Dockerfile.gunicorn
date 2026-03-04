@@ -1,0 +1,38 @@
+# Dockerfile.gunicorn — Multi-worker production image
+# Best for: traditional servers, VMs, high-load APIs
+# Workers = 2 * CPU + 1 (calculated at runtime)
+
+FROM python:3.12-slim AS builder
+
+WORKDIR /build
+RUN pip install --no-cache-dir uv
+COPY pyproject.toml uv.lock* requirements.txt* ./
+RUN if [ -f uv.lock ]; then uv sync --frozen --no-dev --compile-bytecode; \
+    else pip install --no-cache-dir -r requirements.txt; fi
+
+# --- Production stage ---
+FROM python:3.12-slim AS production
+
+RUN groupadd --system app && useradd --system --gid app app
+
+WORKDIR /app
+
+# Copy virtualenv from builder (skip reinstalling packages)
+COPY --from=builder /build/.venv /app/.venv 2>/dev/null || true
+COPY --from=builder /usr/local/lib/python3.12/site-packages /usr/local/lib/python3.12/site-packages 2>/dev/null || true
+
+ENV PATH="/app/.venv/bin:$PATH"
+
+COPY --chown=app:app app/ ./app/
+COPY --chown=app:app gunicorn.conf.py ./
+COPY --chown=app:app alembic/ ./alembic/ 2>/dev/null || true
+COPY --chown=app:app alembic.ini ./alembic.ini 2>/dev/null || true
+
+USER app
+
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')" || exit 1
+
+CMD ["gunicorn", "app.main:app", "-c", "gunicorn.conf.py"]
