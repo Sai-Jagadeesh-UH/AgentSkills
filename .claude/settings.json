@@ -1,10 +1,19 @@
 {
   "permissions": {
-    "additionalDirectories": [
-      "/home/sai/Documents/Coding/ClaudePractice/ClaudeSkillGit/fastapi/.git"
-    ],
     "allow": [
-      "Bash(git -C /home/sai/Documents/Coding/ClaudePractice/ClaudeSkillGit status --short)"
+      "Bash(git -C /home/sai/Documents/Coding/ClaudePractice/ClaudeSkillGit status --short)",
+      "Bash(git checkout -b dev-fastapi-skill)",
+      "Read(//home/sai/Documents/Coding/ClaudePractice/ClaudeSkillFastAPI/skills/fastapi-skill/**)",
+      "Bash(git -C /home/sai/Documents/Coding/ClaudePractice/ClaudeSkillGit log --oneline dev-fastapi-skill ^main)",
+      "Bash(git -C /home/sai/Documents/Coding/ClaudePractice/ClaudeSkillGit checkout main)",
+      "Bash(git branch -d dev-fastapi-skill)",
+      "Bash(git -C /home/sai/Documents/Coding/ClaudePractice/ClaudeSkillGit status)",
+      "Bash(git -C /home/sai/Documents/Coding/ClaudePractice/ClaudeSkillGit ls-files --others --exclude-standard)",
+      "Bash(git -C /home/sai/Documents/Coding/ClaudePractice/ClaudeSkillGit diff HEAD .claude/settings.json)"
+    ],
+    "additionalDirectories": [
+      "/home/sai/Documents/Coding/ClaudePractice/ClaudeSkillGit/fastapi/.git",
+      "/home/sai/.claude/projects/-home-sai-Documents-Coding-ClaudePractice-ClaudeSkillGit"
     ]
   }
 }
