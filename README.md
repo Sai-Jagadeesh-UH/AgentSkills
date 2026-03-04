@@ -8,7 +8,7 @@ A central repo for Claude Code skills and their reference dependency projects.
 AgentSkills/
 ├── skills/                  # Claude Code skill definitions
 │   ├── fastapi-skill/       # FastAPI skill (SKILL.md, assets, agents, references)
-│   └── nicegui-ui/          # NiceGUI skill (SKILL.md, examples, references)
+│   └── nicegui-skill/       # NiceGUI skill (SKILL.md, examples, references)
 ├── fastapi/                 # FastAPI reference project & dependency exploration
 └── nicegui/                 # NiceGUI reference project & dependency exploration
 ```
@@ -18,7 +18,7 @@ AgentSkills/
 | Skill | Description |
 |-------|-------------|
 | `fastapi-skill` | FastAPI REST API development, testing, deployment, Pydantic, JWT/OAuth2 |
-| `nicegui-ui` | NiceGUI Python UI — components, layouts, async, data binding, auth |
+| `nicegui-skill` | NiceGUI Python UI — components, layouts, async, data binding, auth |
 
 ## Usage
 

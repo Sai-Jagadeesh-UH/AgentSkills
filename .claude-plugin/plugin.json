@@ -8,7 +8,7 @@
     }
   },
   {
-    "name": "nicegui-ui",
+    "name": "nicegui-skill",
     "description": "Python UI development skill using the NiceGUI framework. Provides components, layouts, async patterns, data binding, auth, integrations, and testing guidance for building NiceGUI apps.",
     "author": {
       "name": "sai",

@@ -8,7 +8,7 @@ Gives Claude comprehensive knowledge of NiceGUI patterns, components, and best p
 
 ## Skills
 
-### `nicegui-ui`
+### `nicegui-skill`
 
 Triggered when you ask Claude to build NiceGUI apps, components, pages, or anything UI-related with NiceGUI/Python.
 
@@ -31,7 +31,7 @@ Triggered when you ask Claude to build NiceGUI apps, components, pages, or anyth
 │   └── plugin.json
 ├── README.md
 ├── skills/
-│   └── nicegui-ui/
+│   └── nicegui-skill/
 │       ├── SKILL.md               # Core skill - always loaded when triggered
 │       ├── references/
 │       │   ├── components.md      # All UI components with examples

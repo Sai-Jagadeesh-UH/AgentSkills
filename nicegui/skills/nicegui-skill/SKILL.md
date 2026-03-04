@@ -1,5 +1,5 @@
 ---
-name: nicegui-ui
+name: nicegui-skill
 description: Build, update, or adjust any UI, frontend, component, page, or site using NiceGUI or Python. Trigger on: NiceGUI app, Python UI, dashboard, form, component, auth, FastAPI frontend, table, chat app, real-time UI, header/footer/sidebar, dockerize app, or any frontend/UI work in a Python project.
 version: 0.5.0
 ---
